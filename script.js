@@ -45,7 +45,12 @@ function game(){
 
         while (!selections.includes(playerSelection)){
 
-            playerSelection = prompt("Pick rock, paper or scissors.").toLowerCase();
+            playerSelection = prompt("Pick rock, paper or scissors.");
+            
+            if (playerSelection != null){
+
+                playerSelection = playerSelection.toLowerCase();
+            }
         }
 
         console.log(`Round ${i+1}: ${playRound(playerSelection, computerSelection)}`);
